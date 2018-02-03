@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../themes/basic/controller.scss';
 
 export class Controller extends React.PureComponent {
   render () {
