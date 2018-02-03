@@ -6,7 +6,7 @@ export class Loader extends React.Component {
 
   render () {
     if(this.props.show) {
-      return (<div className='loader-container'>/**/</div>);
+      return (<div className='loader-container'>{/**/}</div>);
     }
     return null;
   }
