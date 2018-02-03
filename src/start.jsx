@@ -2,10 +2,12 @@ import React, {Fragment} from 'react';
 import {render} from 'react-dom';
 import './app/themes/basic/basic.scss';
 import {Controller} from "./app/containers/controller/controller";
-import {User} from "./app/components/User";
+import {ECMAScript6} from "./app/components/ECMAScript6";
 import {BrowserRouter, Route} from 'react-router-dom';
 import {Header} from "./app/containers/header/header";
-import {Home} from "./app/components/Home";
+import {ECMAScript5} from "./app/components/ECMAScript5";
+import {Java_tuts} from "./app/components/Java_tuts";
+import {ReactJsComponent} from "./app/components/ReactJsComponent";
 
 class App extends React.Component {
   render () {
@@ -22,8 +24,11 @@ class App extends React.Component {
 
           <Controller>
             <Header/>
-            <Route path='/user' component={User}/>
-            <Route path='/home' component={Home}/>
+            <Route path='/' exact component={ECMAScript5}/>
+            <Route path='/ES5' exact component={ECMAScript5}/>
+            <Route path='/ES6' component={ECMAScript6}/>
+            <Route path='/Java' component={Java_tuts}/>
+            <Route path='/ReactJs' component={ReactJsComponent}/>
           </Controller>
         </Fragment>
     )

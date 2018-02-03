@@ -41,7 +41,7 @@ const config = {
       {test: /\.html$/, use: ['html-loader']},
       // sass-loader with sourceMap activated
       {
-        test: /\.scss$/,
+        test: /\.(scss|css)$/,
         include: [path.resolve(__dirname, 'src', 'app', 'themes')],
         use: extractPlugin.extract({
           use: [
@@ -62,8 +62,8 @@ const config = {
         })
       },
       {
-        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-        include: [path.resolve(__dirname, 'src', 'app', 'themes', 'fonts')],
+        test: /\.(png|woff|woff2|eot|ttf|svg|gif)$/,
+        include: [path.resolve(__dirname, 'src', 'app', 'themes')],
         use: [{loader: "url-loader"}]
       }
     ]
@@ -86,7 +86,7 @@ const config = {
     // open app in localhost:9000
     port: 9000,
     stats: 'errors-only',
-    open: true
+    open: false
   },
 
   devtool: 'inline-source-map',

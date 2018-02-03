@@ -1,16 +1,15 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import '../../themes/basic/header.scss';
 
-export class Header extends React.PureComponent {
+export class Header extends React.Component {
   render () {
     return (<div className='header-container'>
       <div className='header-bar'>
-        <Link to='/home' className={'active'}>ECMAScript 5</Link>
-        <Link to='/user'>ECMAScript 6</Link>
-        <Link to='/user'>JAVA</Link>
-        <Link to='/user'>ReactJs</Link>
-        <Link to='/user'>Css</Link>
+        <NavLink to='/ES5' exact activeClassName={'active'}>ECMAScript 5</NavLink>
+        <NavLink to='/ES6' exact activeClassName={'active'}>ECMAScript 6</NavLink>
+        <NavLink to='/Java' activeClassName={'active'}>JAVA</NavLink>
+        <NavLink to='/ReactJs' activeClassName={'active'}>ReactJs</NavLink>
       </div>
     </div>);
   }
