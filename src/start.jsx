@@ -3,11 +3,13 @@ import {render} from 'react-dom';
 import './app/themes/basic/basic.scss';
 import {Controller} from "./app/containers/controller/controller";
 import {ECMAScript6} from "./app/components/ECMAScript6";
-import {BrowserRouter, Route} from 'react-router-dom';
+import {HashRouter, Route} from 'react-router-dom';
 import {Header} from "./app/containers/header/header";
 import {ECMAScript5} from "./app/components/ECMAScript5";
 import {Java_tuts} from "./app/components/Java_tuts";
 import {ReactJsComponent} from "./app/components/ReactJsComponent";
+import {EventsContainer} from "./app/containers/es5-components/events/EventsContainer";
+import {ObjectComponent} from "./app/containers/es5-components/objects/ObjecComponent";
 
 class App extends React.Component {
   render () {
@@ -25,7 +27,12 @@ class App extends React.Component {
           <Controller>
             <Header/>
             <Route path='/' exact component={ECMAScript5}/>
-            <Route path='/ES5' exact component={ECMAScript5}/>
+            <Route path='/ES5' render={() => {
+              return (<ECMAScript5>
+                <Route path='/ES5/Events' render={() => <EventsContainer/>}/>
+                <Route path='/ES5/Objects' render={() => <ObjectComponent/>}/>
+              </ECMAScript5>);
+            }}/>
             <Route path='/ES6' component={ECMAScript6}/>
             <Route path='/Java' component={Java_tuts}/>
             <Route path='/ReactJs' component={ReactJsComponent}/>
@@ -35,7 +42,7 @@ class App extends React.Component {
   }
 }
 
-render(<BrowserRouter><App/></BrowserRouter>, document.getElementById('app'));
+render(<HashRouter><App/></HashRouter>, document.getElementById('app'));
 
 
 

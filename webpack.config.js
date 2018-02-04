@@ -86,7 +86,7 @@ const config = {
     // open app in localhost:9000
     port: 9000,
     stats: 'errors-only',
-    open: false
+    open: true
   },
 
   devtool: 'inline-source-map',

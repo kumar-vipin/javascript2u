@@ -1,0 +1,53 @@
+@import "../common/variables";
+
+body.basic {
+  .ecmascript-5-container {
+    display: flex;
+    .content-link-wrapper {
+      width: 30%;
+      padding: 10px;
+      .list-item {
+
+        a {
+          text-decoration: none;
+          color: inherit;
+          padding: 5px 10px;
+          box-shadow: 0 1px 0 #2a2a2a;
+          width: 100%;
+          display: flex;
+          font-family: $js-font;
+
+          &:hover {
+            background-color: #3C3F41;
+            cursor: pointer;
+            box-shadow: 0 1px 0 #2a2a2a, 0 -1px 0 #444;
+          }
+          &.active {
+            box-shadow: 0 1px 0 #2a2a2a,0 1px 0 #444 inset, 4px 0 0 orange inset;
+            background-color: #3a3a3a;
+            &:hover {
+              box-shadow: 0 1px 0 #2a2a2a, 0 -1px 0 #444, 4px 0 0 orange inset;
+            }
+          }
+        }
+
+        &:first-child {
+          a {
+            box-shadow: 0 1px 0 #2a2a2a, 0 -1px 0 #444;
+            &.active {
+              box-shadow: 0 1px 0 #2a2a2a, 0 -1px 0 #444, 4px 0 0 orange inset;
+              background-color: #3a3a3a;
+            }
+          }
+        }
+      }
+
+    }
+    .content-wrapper {
+      flex: 1;
+      background-color: #2B2B2B;
+      margin: 10px;
+      margin-left: 0;
+    }
+  }
+}
