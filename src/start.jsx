@@ -10,6 +10,11 @@ import {Java_tuts} from "./app/components/Java_tuts";
 import {ReactJsComponent} from "./app/components/ReactJsComponent";
 import {EventsContainer} from "./app/containers/es5-components/events/EventsContainer";
 import {ObjectComponent} from "./app/containers/es5-components/objects/ObjecComponent";
+import hljs from 'highlight.js';
+
+/*['pre', 'code'].forEach(function (block, i) {
+  hljs.initHighlightingOnLoad(block);
+});*/
 
 class App extends React.Component {
   render () {

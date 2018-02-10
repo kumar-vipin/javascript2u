@@ -1,5 +1,28 @@
 body.basic {
   .events-container {
     color: inherit;
+    .dom-structure {
+      height: 165px;
+      background-image: url(images/prog-dom-1.png);
+      background-repeat: no-repeat;
+      margin-bottom: 10px;
+      background-size: 95%;
+    }
+    ul{
+      margin: 0 5px;
+      li {
+        margin-top: 5px;
+        text-align: justify;
+      }
+    }
+  }
+  pre {
+    margin: 10px 10px;
+    box-shadow: 0 0 0 1px #444;
+    border-radius: 5px;
+    code {
+      padding: 10px;
+      border-radius: 5px;
+    }
   }
 }

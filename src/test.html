@@ -1,0 +1,65 @@
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Event Order</title>
+    <style>
+        #element-1 {
+            width: 200px;
+            border: 1px solid #333;
+            padding: 10px 20px 20px 20px;
+            margin: 3px;
+        }
+        #element-2 {
+            border: 1px solid red;
+            padding: 10px 20px 20px 20px;
+            margin: 3px;
+        }
+        #element-3 {
+            border: 1px solid darkgreen;
+            padding: 20px;
+            margin: 3px;
+        }
+    </style>
+    <script type='text/javascript'>
+      window.onload = function () {
+        var element_1 = document.getElementById('element-1');
+        var element_2 = document.getElementById('element-2');
+        var element_3 = document.getElementById('element-3');
+        /**
+         Syntax:
+         target.addEventListener(type, listener[, useCapture]);
+
+         Note:
+         If last argument (i.e useCapture) is true the event handler is set for the capturing phase,
+         if it is false the event handler is set for the bubbling phase.
+         */
+        element_1.addEventListener('click', handleClickEventOnElement_1, false);
+        element_2.addEventListener('click', handleClickEventOnElement_2, false);
+        element_3.addEventListener('click', handleClickEventOnElement_3, false);
+      };
+
+      function handleClickEventOnElement_1 () {
+        alert('Element-1 Clicked');
+      }
+
+      function handleClickEventOnElement_2 () {
+        alert('Element-2 Clicked');
+      }
+
+      function handleClickEventOnElement_3 () {
+        alert('Element-3 Clicked');
+      }
+    </script>
+</head>
+<body>
+<div id='element-1'>
+    Element-1
+    <div id='element-2'>
+        Element-2
+        <div id='element-3'>
+            Element-3
+        </div>
+    </div>
+</div>
+</body>
+</html>
