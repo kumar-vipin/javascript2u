@@ -4,13 +4,9 @@ import hljs from "highlight.js";
 
 export class EventsContainer extends React.Component {
 
-  componentDidMount () {
-
-      ['pre', 'code'].forEach(function (block, i) {
-        hljs.initHighlightingOnLoad(block);
-      });
-
-
+  componentDidMount() {
+    hljs.initHighlighting();
+    hljs.initHighlighting.called = false;
   }
 
   render () {
