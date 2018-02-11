@@ -8,10 +8,10 @@ export class ECMAScript5 extends React.Component {
         <div className='container ecmascript-5-container'>
           <div className={'content-link-wrapper'}>
             <div className={'list-item'}>
-              <NavLink to='/ES5/Events' activeClassName={'active'}>Event Order</NavLink>
+              <NavLink to='/ES5/Objects' activeClassName={'active'}>Objects</NavLink>
             </div>
             <div className={'list-item'}>
-              <NavLink to='/ES5/Objects' activeClassName={'active'}>Objects</NavLink>
+              <NavLink to='/ES5/Events' activeClassName={'active'}>Event Order</NavLink>
             </div>
           </div>
           <div className={'content-wrapper'}>

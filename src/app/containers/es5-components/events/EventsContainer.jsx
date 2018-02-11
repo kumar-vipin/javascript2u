@@ -2,7 +2,7 @@ import React from 'react';
 import '../../../themes/basic/events-container.scss';
 import hljs from "highlight.js";
 
-export class EventsContainer extends React.Component {
+export class EventsContainer extends React.PureComponent {
 
   componentDidMount() {
     hljs.initHighlighting();
@@ -24,10 +24,10 @@ export class EventsContainer extends React.Component {
             exactly opposite concept of event order.
             <ul>
               <li>Netscape said that the most specific node should receive the event last.
-                Considering above element diagram, the event on <b>Element-1</b> takes place first. This is called event capturing.</li>
+                Considering above element diagram, the event on <i>Element-1</i> takes place first. This is called event capturing.</li>
               <li>
-                Microsoft said that the most specific node should receive the event first. that's why, the event on <b>Element-3</b> takes place first
-                (the deepest possible point in the document tree, in example deepest point in element tree is <b>Element-3</b>). This is called event bubbling.
+                Microsoft said that the most specific node should receive the event first. that's why, the event on <i>Element-3</i> takes place first
+                (the deepest possible point in the document tree, in example deepest point in element tree is <i>Element-3</i>). This is called event bubbling.
               </li>
               <li>
                 Event bubbling and capturing are two ways of propagating events which occur in an element that is nested within another element.

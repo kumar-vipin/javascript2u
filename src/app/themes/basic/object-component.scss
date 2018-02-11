@@ -1,0 +1,27 @@
+body.basic {
+  .object-component {
+    color: inherit;
+    pre {
+      code {
+        .block {
+          .img-1 {
+            height: 150px;
+            display: inherit;
+            background-image: url(images/object-comp-img-1.png);
+            background-repeat: no-repeat;
+            margin-bottom: 10px;
+            background-size: 95%;
+          }
+          .img-2 {
+            height: 50px;
+            display: inherit;
+            background-image: url(images/object-comp-img-2.png);
+            background-repeat: no-repeat;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+
+}
